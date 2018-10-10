@@ -7,14 +7,14 @@
     "mobx-react": "^5.2.8",
     "mobx-react-devtools": "^6.0.3",
     "react": "^16.5.2",
-    "react-app-rewire-mobx": "^1.0.9",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,9 +24,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "babel-preset-mobx": "^2.0.0",
-    "react-app-rewired": "^1.6.2"
-  }
+  ]
 }
