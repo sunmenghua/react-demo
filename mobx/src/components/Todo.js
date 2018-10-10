@@ -8,13 +8,11 @@ class Todo extends React.Component {
     const { todo } = this.props;
 
     return (
-      <div style={{display: 'flex', justifyContent: 'space-between'}}>
-        <div>
-          {todo.finished && (
-            <Icon type="check" style={{color: '#87d068', marginRight: '10px'}} />
-          )}
-          <span>{todo.content}</span>
-        </div>
+      <div className="todo-wrap">
+        {todo.finished && (
+          <Icon type="check" className="todo-checked" />
+        )}
+        <div className="todo-content">{todo.content}</div>
         {todo.finished === false && (
           <Tag color="#2db7f5" onClick={this.handleDoneClick} >完成</Tag>
         )}

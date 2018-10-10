@@ -18,6 +18,9 @@ class TodoList extends React.Component {
             <Todo todo={item} />
           </div>
         ))}
+        {todos.length === 0 && (
+          <div style={{textAlign: 'center', color: 'gray'}}>No Data</div>
+        )}
       </Card>
     );
   }

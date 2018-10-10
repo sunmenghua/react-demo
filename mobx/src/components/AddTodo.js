@@ -15,7 +15,7 @@ class AddTodo extends React.Component {
       <Card title="Add Todo">
         <Row>
           <TextArea
-            rows={3}
+            rows={2}
             value={this.state.content}
             onChange={this.handleChange}
           />
