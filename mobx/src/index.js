@@ -1,19 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { observer } from "mobx-react"
 import DevTools from "mobx-react-devtools";
 import TodoList from './components/TodoList';
 import AddTodo from './components/AddTodo';
+import todoStore from "./stores/todoStore";
 
-import TodoListModel from "./models/TodoListModel";
-import TodoModel from "./models/TodoModel";
+import 'antd/dist/antd.css';
+import './index.css';
 
-function App() {
-  return (
-    <div>
-      <AddTodo />
-      <TodoList />
-    </div>
-  );
+@observer
+class App extends React.Component {
+  render() {
+    return (
+      <div className="app">
+        <AddTodo store={this.props.store} />
+        <div style={{marginTop: '30px'}}>
+          <TodoList store={this.props.store} />
+        </div>
+        <DevTools />
+      </div>
+    );
+  }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App store={todoStore} />, document.getElementById('root'));
