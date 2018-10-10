@@ -6,8 +6,7 @@ class TodoStore {
 
   addTodo(content) {
     const newTodo = new TodoModel(content);
-    this.todos.push(newTodo);
-    console.log('this.todos', this.todos.length);
+    this.todos.unshift(newTodo);
   }
 }
 
