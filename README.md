@@ -4,4 +4,5 @@
 
 * Flux
 * Redux
+* Redux-Sage
 * Mobx
